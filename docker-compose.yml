@@ -1,0 +1,13 @@
+
+version: '3'
+
+services:
+  app-ms-docker-app:
+    image: app-ms-docker:1
+    build:
+      context: ./
+      dockerfile: dockerfile
+    volumes:
+      - /data/app-ms-docker-app
+    ports:
+      - "8081:8081"
